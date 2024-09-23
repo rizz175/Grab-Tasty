@@ -51,7 +51,7 @@ class CustomButton extends StatelessWidget {
           children: [
             icon ?? const SizedBox.shrink(),
             icon != null
-                ? SizedBox(width: iconGap ?? 20)
+                ? SizedBox(width: iconGap ?? 10)
                 : const SizedBox.shrink(),
             Flexible(
               child: Text(

@@ -87,11 +87,11 @@ class Texts {
     return Text(
       label,
       style: TextStyle(
-          decoration: TextDecoration.underline,
+          decoration: TextDecoration.underline,decorationColor: Colors.white,
           fontSize: size ?? 18.0,
           fontFamily: fontFamily ?? "Roboto",
           fontWeight: fontWeight ?? FontWeight.bold,
-          color: color ?? Colors.black),
+          color: color ?? Colors.white),
       overflow: overflow ?? TextOverflow.ellipsis,
       maxLines: maxline ?? 1,
     );

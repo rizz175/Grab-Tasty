@@ -86,7 +86,7 @@ class _CustomAlertDialogState extends State<CustomAlertDialog> {
                       InkWell(
                           onTap: () => widget.onCancel(),
                           child: Texts.textBlock(widget.cancelButtonTitle??"No",
-                              color: ColorConstants.primaryBlackColor,
+                              color: ColorConstants.primaryColor,
                               fontWeight: FontWeight.w500)),
                       const SizedBox(width: 20,),
                       InkWell(
@@ -193,7 +193,7 @@ class CustomDeleteDialog extends StatelessWidget {
                       InkWell(
                           onTap: () => onCancel(),
                           child: Texts.textBlock(cancelButtonTitle??"No",
-                              color: ColorConstants.primaryBlackColor,
+                              color: ColorConstants.primaryColor,
                               fontWeight: FontWeight.w500)),
                       const SizedBox(width: 20,),
                       InkWell(

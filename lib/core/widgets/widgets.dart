@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:grabtasty/core/widgets/text_widgets.dart';
 
 import 'package:flutter/cupertino.dart';
@@ -60,7 +61,29 @@ class Widgets {
       ),
     ));
   }
-
+  static Widget networkImage(String url,
+      {double? height, double? width, int? cacheSize}) {
+    return CachedNetworkImage(
+      imageUrl: url,
+      fit: BoxFit.cover,
+      height: height,
+      width: width,
+      memCacheHeight: cacheSize,
+      memCacheWidth: cacheSize,
+      progressIndicatorBuilder: (context, url, downloadProgress) => Image.asset(
+        Assets.placeholder,
+        fit: BoxFit.cover,
+        height: height,
+        width: width,
+      ),
+      errorWidget: (context, url, error) => Image.asset(
+        Assets.placeholder,
+        fit: BoxFit.cover,
+        height: height,
+        width: width,
+      ),
+    );
+  }
   static var blockDecoration = BoxDecoration(
       color: Colors.white, borderRadius: BorderRadius.circular(10));
   static customDivider(

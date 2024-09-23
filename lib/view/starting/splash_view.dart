@@ -11,6 +11,7 @@ import 'package:grabtasty/view/starting/boarding_view.dart';
 import '../../controller/user_controller.dart';
 import '../../core/constants/assets_constants.dart';
 import '../../core/constants/color_constants.dart';
+import '../dashboard/view/dashboard_view.dart';
 
 
 
@@ -56,12 +57,12 @@ class _SplashViewState extends State<SplashView> {
                           duration: 4000,
                           centered: true,
                           splashIconSize: 500,
-                          splash: Icon(Icons.food_bank_outlined,size: 100,color: Colors.white,),
+                          splash: Image.asset(Assets.primaryLogo),
                           nextScreen: userController.token != null
-                              ?  Container()
+                              ? const BottomNavScreen()
                               : const OnboardingScreen(),
                           splashTransition: SplashTransition.scaleTransition,
-                          backgroundColor: ColorConstants.primaryColor));
+                          backgroundColor: Colors.white));
                 }
             ));
       },

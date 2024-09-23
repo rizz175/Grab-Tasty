@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:grabtasty/core/constants/color_constants.dart';
 import 'package:grabtasty/core/widgets/widgets.dart';
+import 'package:grabtasty/view/dashboard/view/dashboard_view.dart';
 import 'package:grabtasty/view/home/view/home_view.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
@@ -165,7 +166,7 @@ class _OtpVerificationViewState extends State<OtpVerificationView> with TickerPr
               opacity: _buttonController,
               child: CustomButton(
                 label: "Continue",
-                onTap: otp?.length != 6 ? null : () {Get.to(HomeScreen());},
+                onTap: otp?.length != 6 ? null : () {Get.to(BottomNavScreen());},
               ),
             ),
           ],
